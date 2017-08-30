@@ -1,17 +1,12 @@
-# python-flask-starter
+# OPASS FJU front-end and http server
 
 ## Installation
 
 `sudo pip3 install -r requirements.txt`
 
-## Including Functions 
 
-This starter include the following functions
+### Back-End using
+* flask jinja2
 
-### Back-End
-* flask jinja2 example
-* Support JSON fomat response
-
-### Front-End
-* css compass example
-* vueJS example
+### Front-End using 
+* vueJS materializecss

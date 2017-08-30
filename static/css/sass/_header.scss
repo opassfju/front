@@ -1,0 +1,13 @@
+
+
+
+header{
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+  @media only screen and (max-width: 768px){
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
