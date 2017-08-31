@@ -1,7 +1,5 @@
 *.pyc
-
+/node_modules/*.*
 *.scssc
-
 *.DS_Store
-
 *.pyc
