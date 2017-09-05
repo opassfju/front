@@ -1,54 +1,186 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <title>{{head.title}}</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{head.description}}">
-    <meta name="author" content="{{head.author}}">
-    <meta property="og:title" content="{{head.title}}" />
-    <meta property="og:description" content="{{head.description}}" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://127.0.0.1/"/>
-    <meta property="og:image" content="static/imgs/Banner.png" />
-    <meta property="og:site_name" content="{{head.title}}"/>
-    <link rel="shortcut icon" href="static/imgs/icon.png" />
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 設定IE兼容性，什麼版本的IE就用什麼版本的標準模式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Opass表單填寫</title>
+        <!--<link rel="stylesheet" href="css/stylesheets/bootstrap.min.css">--> <!-- 會跟materialize衝突，先不用 -->
+        <link rel="stylesheet" href="../static/css/stylesheets/materialize.min.css">
+        <link rel="stylesheet" href="../static/css/stylesheets/style.css">
+    </head>
+    
+    <body>
+        <div id="main">
+            <div class="row">
+                <div id="main-left" class="col s4">
+                    <div class="container">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="static/css/stylesheets/bootstrap.min.css">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="static/css/stylesheets/materialize.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="static/css/stylesheets/style.css?version=00000">
-</head>
+                        <h1 id="opass-title">Opass</h1>
 
-<body>
-    <div id="main">
-        <div id="main-left" class="container">
-            <h1>Opass</h1>
-            <form>
-                <input type="text">
-            </form>
-        </div>
+                        <form>
+                            <p><h5>基本資料</h5></p>
 
-        <div id="main-right" class="container">
-            <h2>填寫新的課程評價</h2>
-            <form></form>
-        </div>
-    </div>
+                            <div id="form-course" class="input-field">
+                                <input id="course" type="text" name="course" class="validate" placeholder="請填寫課程名稱">
+                                <label for="course">課程名稱</label>
+                            </div>
+                                
+                            <div id="form-teacher" class="input-field">
+                                <input id="teacher" type="text" name="teacher" class="validate" placeholder="請填寫老師姓名">
+                                <label for="teacher">任課老師</label>    
+                            </div>
+                                
+                            <p id="p-multi-teacher">
+                                <input id="multi-teacher" type="checkbox" name="multi-teacher" class="fill-in" value="true">
+                                <label for="multi-teacher">多位教師
+                            </p>
+                            
 
-    <!-- Jquery -->
-    <script src="static/js/libs/jquery.js"></script>
-    <script src="static/js/libs/js.cookie.js"></script>
-    <!-- Bootstrap js -->
-    <script src="static/js/libs/bootstrap.min.js"></script>
-    <!-- Materialize js -->
-    <script src="static/js/libs/materialize.min.js"></script>
-    <!-- Vue -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+                            <div id="form-division" class="input-field">
+                                <select name="division">
+                                    <option value="" disabled selected>請選擇開課部別</option>
+                                    <option value="日間部">日間部</option>
+                                    <option value="夜間部">夜間部</option>
+                                    <option value="進修部">進修部</option>
+                                </select>
+                                <label>開課部別</label>
+                            </div>
+                            
+                            <div id="form-department" class="input-field">
+                                <select name="department">
+                                    <option value="" disabled selected>請選擇開課系所</option>
+                                    <option value="中文系">中文系</option>
+                                    <option value="外文系">外文系</option>
+                                    <option value="資工系">資工系</option>
+                                </select>
+                                <label>開課系所</label>
+                            </div>
 
-    <script src="static/js/util.js"></script>
-    <script src="static/js/index.js"></script>
-</body>
+                            <div id="form-must-or-choice">
+                                <label>類別</label>
+                                <p>
+                                    <input id="must" type="radio" name="must-or-choice" value="must">
+                                    <label for="must">必修</label>
+                                </p>
+                                <p>
+                                    <input id="choice" type="radio" name="must-or-choice" value="choice">
+                                    <label for="choice">選修</label>
+                                </p>
+                                <p>
+                                    <input id="must-choice" type="radio" name="must-or-choice" value="must_choice">
+                                    <label for="must-choice">必選修</label>
+                                </p>
+                            </div>
+
+                            <div id="form-other">
+                                <label>其他</label>
+                                <p id="p-other-is-multi-teacher">
+                                    <input id="other-multi-teacher" type="checkbox" name="other-multi-teacher" class="fill-in" value="true">
+                                    <label for="other-multi-teacher">多位教師</label>
+                                </p>
+                            </div>
+                        </form>
+                    </div> <!-- /.container -->
+                </div> <!-- /#main-left -->
+        
+                <div id="main-right" class="col s8">
+                    <div class="container">
+                        <h2>填寫新的課程評價</h2>
+                        <hr>
+
+                        <form>
+                            <h3>| 關於課程 |</h3>
+
+                            <p> <b>收獲多少？</b> </p>
+                            <p>
+                                非常少
+                                <input id="gain-1" type="radio" name="gain-score">
+                                <label for="gain-1">1</label>
+
+                                <input id="gain-2" type="radio" name="gain-score">
+                                <label for="gain-2">2</label>
+
+                                <input id="gain-3" type="radio" name="gain-score">
+                                <label for="gain3">3</label>
+
+                                <input id="gain-4" type="radio" name="gain-score">
+                                <label for="gain-4">4</label>
+
+                                <input id="gain-5" type="radio" name="gain-score">
+                                <label for="gain-5">5</label>
+                                非常多
+                            </p>
+
+                            <p> <b>課程有趣？</b> </p>
+                            <p>
+                                非常不有趣
+                                <input id="interesting-1" type="radio" name="interesting-score">
+                                <label for="interesting-1">1</label>
+        
+                                <input id="interesting-2" type="radio" name="interesting-score">
+                                <label for="interesting-2">2</label>
+        
+                                <input id="interesting-3" type="radio" name="interesting-score">
+                                <label for="interesting3">3</label>
+        
+                                <input id="interesting-4" type="radio" name="interesting-score">
+                                <label for="interesting-4">4</label>
+        
+                                <input id="interesting-5" type="radio" name="interesting-score">
+                                <label for="interesting-5">5</label>
+                                非常有趣
+                            </p>
+
+                            <p> <b>作業量</b> </p>
+                            <p>
+                                沒有作業
+                                <input id="homework-volume-1" type="radio" name="homework-volume">
+                                <label for="homework-volume-1">1</label>
+
+                                <input id="homework-volume-2" type="radio" name="homework-volume">
+                                <label for="homework-volume-2">2</label>
+
+                                <input id="homework-volume-3" type="radio" name="homework-volume">
+                                <label for="homework-volume-3">3</label>
+
+                                <input id="homework-volume-4" type="radio" name="homework-volume">
+                                <label for="homework-volume-4">4</label>
+
+                                <input id="homework-volume-5" type="radio" name="homework-volume">
+                                <label for="homework-volume-5">5</label>
+                                作業非常多
+                            </p>
+
+                            <p> <b>作業類型</b> </p>
+                            <p>
+                                非常不有趣
+                                <input id="homework-type-1" type="radio" name="homework-type">
+                                <label for="homework-type-1">1</label>
+
+                                <input id="homework-type-2" type="radio" name="homework-type">
+                                <label for="homework-type-2">2</label>
+
+                                <input id="homework-type-3" type="radio" name="homework-type">
+                                <label for="homework-type3">3</label>
+
+                                <input id="homework-type-4" type="radio" name="homework-type">
+                                <label for="homework-type-4">4</label>
+
+                                <input id="homework-type-5" type="radio" name="homework-type">
+                                <label for="homework-type-5">5</label>
+                                非常有趣
+                            </p>
+                        </form>
+                    </div> <!-- ./container -->
+                </div> <!-- /#main-right -->
+            </div> <!-- /.row -->
+        </div> <!-- /#main -->
+
+        <!-- scripts -->
+        <script src="../static/js/jquery-3.1.1.min.js"></script>
+        <!--<script src="js/bootstrap.min.js"></script>-->
+        <script src="../static/js/materialize.min.js"></script>
+        <script src="../static/js/script.js"></script>
+    </body>
 </html>

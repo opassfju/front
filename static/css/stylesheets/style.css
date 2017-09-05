@@ -1,24 +1,71 @@
-/*@import "submit";*/
+@charset "UTF-8";
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: grey; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: grey; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: grey; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: grey; }
+
+/* 左邊區塊 */
+#main-left {
+  height: 100vh;
+  background-color: orange;
+  color: black; }
+  #main-left * {
+    color: black; }
+  #main-left #opass-title {
+    color: white;
+    padding-bottom: 50px; }
+  #main-left label {
+    color: grey;
+    font-size: 16px; }
+
+/* 左邊區塊的表單的第一層div */
+#main-left form > div {
+  margin-bottom: 20px; }
+
+/* 選擇是否為多位教師的p區塊 */
+#p-multi-teacher {
+  margin: -35px 0px 50px 0px; }
+
+/* 表單中的必選修 */
+#form-must-or-choice > * {
+  margin: 0px; }
+
+/* 選擇是否為多位教師的p區塊，這是位於表單最下面的其他選項 */
+#p-other-is-multi-teacher {
+  margin: 0px; }
+
+/* 右邊區塊 */
+#main-right {
+  height: 100vh;
+  background-color: white;
+  color: black; }
+
 body {
-  background-color: brown;
-  color: #ffffff;
   font-size: 1.7rem;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  overflow-y: hidden; }
 
 a {
-  color: white;
   text-decoration: underline; }
 
 a:visited {
-  color: white;
   text-decoration: underline; }
 
 a:hover {
-  color: white;
   text-decoration: underline; }
 
 a:active {
-  color: white;
   text-decoration: underline; }
 
 #wrapper {
