@@ -11,11 +11,11 @@ from flask import Response
 from instance import config
 from datetime import datetime
 import time
-import sys
+# import sys
 
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 
 
 app = Flask(__name__)
