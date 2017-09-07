@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 設定IE兼容性，什麼版本的IE就用什麼版本的標準模式 -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Opass表單填寫</title>
-        <!--<link rel="stylesheet" href="css/stylesheets/bootstrap.min.css">--> <!-- 會跟materialize衝突，先不用 -->
         <link rel="stylesheet" href="../static/css/stylesheets/materialize.min.css">
         <link rel="stylesheet" href="../static/css/stylesheets/style.css">
     </head>
@@ -20,23 +19,24 @@
 
                         <form>
                             <p><h5>基本資料</h5></p>
-
-                            <div id="form-course" class="input-field">
-                                <input id="course" type="text" name="course" class="validate" placeholder="請填寫課程名稱">
-                                <label for="course">課程名稱</label>
+                            <!-- 課程名稱 -->
+                            <div class="input-field">
+                                <input id="course" type="text" name="course" class="validate" placeholder="請填寫課程姓名">
+                                <label for="teacher" class="input-text-title">課程名稱</label>
                             </div>
-                                
+
+                            <!-- 任課老師 -->
                             <div id="form-teacher" class="input-field">
                                 <input id="teacher" type="text" name="teacher" class="validate" placeholder="請填寫老師姓名">
-                                <label for="teacher">任課老師</label>    
+                                <label for="teacher" class="input-text-title">任課老師</label>    
                             </div>
                                 
                             <p id="p-multi-teacher">
                                 <input id="multi-teacher" type="checkbox" name="multi-teacher" class="fill-in" value="true">
-                                <label for="multi-teacher">多位教師
+                                <label for="multi-teacher">多位教師</label>
                             </p>
                             
-
+                            <!-- 開課部別 -->
                             <div id="form-division" class="input-field">
                                 <select name="division">
                                     <option value="" disabled selected>請選擇開課部別</option>
@@ -47,6 +47,7 @@
                                 <label>開課部別</label>
                             </div>
                             
+                            <!-- 開課系所 -->
                             <div id="form-department" class="input-field">
                                 <select name="department">
                                     <option value="" disabled selected>請選擇開課系所</option>
@@ -57,22 +58,24 @@
                                 <label>開課系所</label>
                             </div>
 
+                            <!-- 必修或選修 -->
                             <div id="form-must-or-choice">
                                 <label>類別</label>
                                 <p>
-                                    <input id="must" type="radio" name="must-or-choice" value="must">
-                                    <label for="must">必修</label>
+                                    <input id="must" type="radio" class="with-gap" name="must-or-choice" value="must">
+                                    <label for="must" class="radio-title">必修</label>
                                 </p>
                                 <p>
-                                    <input id="choice" type="radio" name="must-or-choice" value="choice">
-                                    <label for="choice">選修</label>
+                                    <input id="choice" type="radio" class="with-gap" name="must-or-choice" value="choice">
+                                    <label for="choice" class="radio-title">選修</label>
                                 </p>
                                 <p>
-                                    <input id="must-choice" type="radio" name="must-or-choice" value="must_choice">
-                                    <label for="must-choice">必選修</label>
+                                    <input id="must-choice" type="radio" class="with-gap" name="must-or-choice" value="must_choice">
+                                    <label for="must-choice" class="radio-title">必選修</label>
                                 </p>
                             </div>
 
+                            <!-- 其他 -->
                             <div id="form-other">
                                 <label>其他</label>
                                 <p id="p-other-is-multi-teacher">
@@ -80,6 +83,7 @@
                                     <label for="other-multi-teacher">多位教師</label>
                                 </p>
                             </div>
+
                         </form>
                     </div> <!-- /.container -->
                 </div> <!-- /#main-left -->
@@ -102,7 +106,7 @@
                                 <label for="gain-2">2</label>
 
                                 <input id="gain-3" type="radio" name="gain-score">
-                                <label for="gain3">3</label>
+                                <label for="gain-3">3</label>
 
                                 <input id="gain-4" type="radio" name="gain-score">
                                 <label for="gain-4">4</label>
@@ -122,7 +126,7 @@
                                 <label for="interesting-2">2</label>
         
                                 <input id="interesting-3" type="radio" name="interesting-score">
-                                <label for="interesting3">3</label>
+                                <label for="interesting-3">3</label>
         
                                 <input id="interesting-4" type="radio" name="interesting-score">
                                 <label for="interesting-4">4</label>
@@ -162,7 +166,7 @@
                                 <label for="homework-type-2">2</label>
 
                                 <input id="homework-type-3" type="radio" name="homework-type">
-                                <label for="homework-type3">3</label>
+                                <label for="homework-type-3">3</label>
 
                                 <input id="homework-type-4" type="radio" name="homework-type">
                                 <label for="homework-type-4">4</label>
@@ -178,9 +182,8 @@
         </div> <!-- /#main -->
 
         <!-- scripts -->
-        <script src="../static/js/jquery-3.1.1.min.js"></script>
-        <!--<script src="js/bootstrap.min.js"></script>-->
-        <script src="../static/js/materialize.min.js"></script>
+        <script src="../static/js/libs/jquery.js"></script>
+        <script src="../static/js/libs/materialize.min.js"></script>
         <script src="../static/js/script.js"></script>
     </body>
 </html>

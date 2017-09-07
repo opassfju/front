@@ -19,7 +19,8 @@
 #main-left {
   height: 100vh;
   background-color: orange;
-  color: black; }
+  color: black;
+  /* radio button的標題 */ }
   #main-left * {
     color: black; }
   #main-left #opass-title {
@@ -28,6 +29,12 @@
   #main-left label {
     color: grey;
     font-size: 16px; }
+  #main-left label.input-text-title {
+    font-size: 20px; }
+  #main-left .radio-title {
+    color: black; }
+  #main-left input[type="checkbox"] + label {
+    color: black; }
 
 /* 左邊區塊的表單的第一層div */
 #main-left form > div {
@@ -49,7 +56,10 @@
 #main-right {
   height: 100vh;
   background-color: white;
-  color: black; }
+  color: black;
+  /* 右邊區塊內的所有label */ }
+  #main-right label {
+    color: black; }
 
 body {
   font-size: 1.7rem;

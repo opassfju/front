@@ -33,6 +33,19 @@ color: $placeholder-color;
         color: grey;
         font-size: 16px;
     }
+
+    label.input-text-title {
+        font-size: 20px;
+    }
+
+    /* radio button的標題 */
+    .radio-title {
+        color: black;
+    }
+
+    input[type="checkbox"] + label {
+        color: black;
+    }
 }
 
 /* 左邊區塊的表單的第一層div */
@@ -60,4 +73,9 @@ color: $placeholder-color;
     height: $window-height;
     background-color: white;
     color: black;
+
+    /* 右邊區塊內的所有label */
+    label {
+        color: black;
+    }
 }
