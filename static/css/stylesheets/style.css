@@ -1,100 +1,206 @@
 @charset "UTF-8";
 /* 設定文字方塊的placeholder */
+/* line 5, ../sass/_submit.scss */
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: grey; }
+  color: grey;
+}
 
+/* line 8, ../sass/_submit.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: grey; }
+  color: grey;
+}
 
+/* line 11, ../sass/_submit.scss */
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: grey; }
+  color: grey;
+}
 
+/* line 14, ../sass/_submit.scss */
 :-moz-placeholder {
   /* Firefox 18- */
-  color: grey; }
+  color: grey;
+}
 
 /* 左邊區塊 */
+/* line 19, ../sass/_submit.scss */
 #main-left {
-  height: 100vh;
+  min-height: 100vh;
   background-color: orange;
   color: black;
-  /* radio button的標題 */ }
-  #main-left * {
-    color: black; }
-  #main-left #opass-title {
-    color: white;
-    padding-bottom: 50px; }
-  #main-left label {
-    color: grey;
-    font-size: 16px; }
-  #main-left label.input-text-title {
-    font-size: 20px; }
-  #main-left .radio-title {
-    color: black; }
-  #main-left input[type="checkbox"] + label {
-    color: black; }
+  /*
+  label.input-text-title {
+      font-size: 20px;
+  }
+  */
+  /* radio button的標題 */
+}
+/* line 24, ../sass/_submit.scss */
+#main-left * {
+  color: black;
+}
+/* line 28, ../sass/_submit.scss */
+#main-left #opass-title {
+  color: white;
+  padding-bottom: 50px;
+}
+/* line 33, ../sass/_submit.scss */
+#main-left label {
+  color: grey;
+  /*font-size: 16px;*/
+}
+/* line 45, ../sass/_submit.scss */
+#main-left .radio-title {
+  color: black;
+}
+/* line 49, ../sass/_submit.scss */
+#main-left input[type="checkbox"] + label {
+  color: black;
+}
 
 /* 左邊區塊的表單的第一層div */
+/* line 55, ../sass/_submit.scss */
 #main-left form > div {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 /* 選擇是否為多位教師的p區塊 */
+/* line 60, ../sass/_submit.scss */
 #p-multi-teacher {
-  margin: -35px 0px 50px 0px; }
+  margin: -35px 0px 50px 0px;
+}
 
 /* 表單中的必選修 */
+/* line 65, ../sass/_submit.scss */
 #form-must-or-choice > * {
-  margin: 0px; }
+  margin: 0px;
+}
 
 /* 選擇是否為多位教師的p區塊，這是位於表單最下面的其他選項 */
+/* line 70, ../sass/_submit.scss */
 #p-other-is-multi-teacher {
-  margin: 0px; }
+  margin: 0px;
+}
 
 /* 右邊區塊 */
+/* line 75, ../sass/_submit.scss */
 #main-right {
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   color: black;
-  /* 右邊區塊內的所有label */ }
-  #main-right label {
-    color: black; }
+  /* 右邊區塊內的所有label */
+  /* radio button 客製化 ( 讓數值在圓圈中央 ) */
+  /* edit by Charlie 20170908 */
+}
+/* line 81, ../sass/_submit.scss */
+#main-right label {
+  color: black;
+}
+/* line 88, ../sass/_submit.scss */
+#main-right .radio-title {
+  font-size: 1.1rem;
+}
+/* line 91, ../sass/_submit.scss */
+#main-right .radio-p {
+  height: 1.85rem;
+  line-height: 1.9rem;
+}
+/* line 97, ../sass/_submit.scss */
+#main-right [type="radio"]:not(:checked) + label, #main-right [type="radio"]:checked + label {
+  padding-left: 10px;
+  padding-top: 2px;
+  margin-left: 1.5rem;
+  margin-top: 0px;
+}
+/* line 103, ../sass/_submit.scss */
+#main-right [type="radio"] + label::before, #main-right [type="radio"] + label::after {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin: 0;
+}
+/* line 109, ../sass/_submit.scss */
+#main-right [type="radio"]:checked + label, #main-right [type="radio"]:not(:checked) + label {
+  background-color: #26a69a;
+  color: white;
+  width: 1.7rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  border-radius: 50%;
+  padding-left: 1px;
+  padding-top: 1px;
+  text-align: center;
+  margin-left: 1.8rem;
+}
+/* line 123, ../sass/_submit.scss */
+#main-right [type="radio"]:not(:checked) + label {
+  background-color: white;
+  color: black;
+}
+/* line 128, ../sass/_submit.scss */
+#main-right [type="radio"]:checked + label::after {
+  /*  -webkit-transform:scale(0);
+    transform:scale(0);*/
+  opacity: 0;
+}
+/* line 134, ../sass/_submit.scss */
+#main-right .radio-right-title {
+  margin-left: 1.5rem;
+}
 
+/* line 3, ../sass/style.scss */
 body {
-  font-size: 1.7rem;
-  letter-spacing: 3px;
-  overflow-y: hidden; }
+  font-size: 1.0rem;
+  letter-spacing: 2px;
+  overflow-x: hidden;
+}
 
+/* line 9, ../sass/style.scss */
 a {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
+/* line 12, ../sass/style.scss */
 a:visited {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
+/* line 15, ../sass/style.scss */
 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
+/* line 18, ../sass/style.scss */
 a:active {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
+/* line 22, ../sass/style.scss */
 #wrapper {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
+/* line 26, ../sass/style.scss */
 .hover:hover {
   cursor: pointer;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 768px) {
+  /* line 31, ../sass/style.scss */
   body {
     font-size: 1.4rem;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+  }
 
+  /* line 34, ../sass/style.scss */
   h1 {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+  }
 
+  /* line 37, ../sass/style.scss */
   h2 {
-    font-size: 2rem; } }
-
-/*# sourceMappingURL=style.css.map */
+    font-size: 2rem;
+  }
+}
