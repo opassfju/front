@@ -1,60 +1,99 @@
-/* line 3, ../sass/style.scss */
+@charset "UTF-8";
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: grey; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: grey; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: grey; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: grey; }
+
+/* 左邊區塊 */
+#main-left {
+  height: 100vh;
+  background-color: orange;
+  color: black;
+  /* radio button的標題 */ }
+  #main-left * {
+    color: black; }
+  #main-left #opass-title {
+    color: white;
+    padding-bottom: 50px; }
+  #main-left label {
+    color: grey;
+    font-size: 16px; }
+  #main-left label.input-text-title {
+    font-size: 20px; }
+  #main-left .radio-title {
+    color: black; }
+  #main-left input[type="checkbox"] + label {
+    color: black; }
+
+/* 左邊區塊的表單的第一層div */
+#main-left form > div {
+  margin-bottom: 20px; }
+
+/* 選擇是否為多位教師的p區塊 */
+#p-multi-teacher {
+  margin: -35px 0px 50px 0px; }
+
+/* 表單中的必選修 */
+#form-must-or-choice > * {
+  margin: 0px; }
+
+/* 選擇是否為多位教師的p區塊，這是位於表單最下面的其他選項 */
+#p-other-is-multi-teacher {
+  margin: 0px; }
+
+/* 右邊區塊 */
+#main-right {
+  height: 100vh;
+  background-color: white;
+  color: black;
+  /* 右邊區塊內的所有label */ }
+  #main-right label {
+    color: black; }
+
 body {
-  background-color: #121212;
-  color: #ffffff;
   font-size: 1.7rem;
   letter-spacing: 3px;
-}
+  overflow-y: hidden; }
 
-/* line 7, ../sass/style.scss */
 a {
-  color: white;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 8, ../sass/style.scss */
 a:visited {
-  color: white;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 9, ../sass/style.scss */
 a:hover {
-  color: white;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 10, ../sass/style.scss */
 a:active {
-  color: white;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 12, ../sass/style.scss */
 #wrapper {
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
-/* line 14, ../sass/style.scss */
 .hover:hover {
   cursor: pointer;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 @media only screen and (max-width: 768px) {
-  /* line 17, ../sass/style.scss */
   body {
     font-size: 1.4rem;
-    letter-spacing: 2px;
-  }
+    letter-spacing: 2px; }
 
-  /* line 20, ../sass/style.scss */
   h1 {
-    font-size: 2.5rem;
-  }
+    font-size: 2.5rem; }
 
-  /* line 21, ../sass/style.scss */
   h2 {
-    font-size: 2rem;
-  }
-}
+    font-size: 2rem; } }
+
+/*# sourceMappingURL=style.css.map */
