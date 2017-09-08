@@ -1,6 +1,7 @@
 $window-height: 100vh;
 $placeholder-color: grey;
 
+/* 設定文字方塊的placeholder */
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 color: $placeholder-color;
 }
