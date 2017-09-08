@@ -11,7 +11,7 @@
     
     <body>
         <div id="main">
-            <div class="row">
+            <div class="row" style="margin-bottom:0px;">
                 <div id="main-left" class="col s4">
                     <div class="container">
 
@@ -90,55 +90,46 @@
         
                 <div id="main-right" class="col s8">
                     <div class="container">
-                        <h2>填寫新的課程評價</h2>
+                        <h4>填寫新的課程評價</h4>
                         <hr>
 
                         <form>
-                            <h3>| 關於課程 |</h3>
+                            <h5>| 關於課程 |</h5>
 
                             <p> <b>收獲多少？</b> </p>
-                            <p>
-                                非常少
+                            <p class="radio-p">
+                                <span class="radio-title">非常少</span>
                                 <input id="gain-1" type="radio" name="gain-score">
                                 <label for="gain-1">1</label>
-
                                 <input id="gain-2" type="radio" name="gain-score">
                                 <label for="gain-2">2</label>
-
                                 <input id="gain-3" type="radio" name="gain-score">
                                 <label for="gain-3">3</label>
-
                                 <input id="gain-4" type="radio" name="gain-score">
                                 <label for="gain-4">4</label>
-
                                 <input id="gain-5" type="radio" name="gain-score">
-                                <label for="gain-5">5</label>
-                                非常多
+                                <label for="gain-5">5</label>  
+                                <span class="radio-title radio-right-title">非常多</span>
                             </p>
 
                             <p> <b>課程有趣？</b> </p>
-                            <p>
-                                非常不有趣
+                            <p class="radio-p">
+                                <span class="radio-title">非常不有趣</span>
                                 <input id="interesting-1" type="radio" name="interesting-score">
                                 <label for="interesting-1">1</label>
-        
                                 <input id="interesting-2" type="radio" name="interesting-score">
                                 <label for="interesting-2">2</label>
-        
                                 <input id="interesting-3" type="radio" name="interesting-score">
                                 <label for="interesting-3">3</label>
-        
                                 <input id="interesting-4" type="radio" name="interesting-score">
                                 <label for="interesting-4">4</label>
-        
                                 <input id="interesting-5" type="radio" name="interesting-score">
                                 <label for="interesting-5">5</label>
-                                非常有趣
+                                <span class="radio-title radio-right-title">非常有趣</span>
                             </p>
-
                             <p> <b>作業量</b> </p>
-                            <p>
-                                沒有作業
+                            <p class="radio-p">
+                                <span class="radio-title">沒有作業</span>
                                 <input id="homework-volume-1" type="radio" name="homework-volume">
                                 <label for="homework-volume-1">1</label>
 
@@ -153,12 +144,12 @@
 
                                 <input id="homework-volume-5" type="radio" name="homework-volume">
                                 <label for="homework-volume-5">5</label>
-                                作業非常多
+                                <span class="radio-title radio-right-title">作業非常多</span>
                             </p>
 
                             <p> <b>作業類型</b> </p>
-                            <p>
-                                非常不有趣
+                            <p class="radio-p">
+                                <span class="radio-title">非常不有趣</span>
                                 <input id="homework-type-1" type="radio" name="homework-type">
                                 <label for="homework-type-1">1</label>
 
@@ -173,7 +164,7 @@
 
                                 <input id="homework-type-5" type="radio" name="homework-type">
                                 <label for="homework-type-5">5</label>
-                                非常有趣
+                                <span class="radio-title radio-right-title">非常有趣</span>
                             </p>
                         </form>
                     </div> <!-- ./container -->
