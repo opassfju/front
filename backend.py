@@ -38,6 +38,9 @@ def index():
 def submit():
     return render_template('submit.html')
 
+@app.route('/fudaer')
+def submit():
+    return render_template('fudaer.html')
 
 # @app.route('/json')
 # def getjson():
