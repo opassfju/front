@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* 設定文字方塊的placeholder */
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: grey; }
